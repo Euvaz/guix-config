@@ -1,0 +1,5 @@
+---
+- name: "Generate symbolic links of configuration files to the respective $HOME directory"
+  ansible.builtin.script:
+    executable: python
+    cmd: gen-symlinks.py
