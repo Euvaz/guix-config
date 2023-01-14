@@ -25,8 +25,12 @@ alias kw='vdy kubectl get'
 # Direnv
 direnv hook fish | source
 
+# Setting environment variables
+set -x GO111MODULE off
+
 # Setting path variables
 set -x GOPATH $HOME/go
+set -x GOBIN $GOPATH/bin
 set -x PATH $PATH $GOPATH/bin $HOME/.local/bin
 
 function vdy --description 'modern watch'
