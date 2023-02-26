@@ -172,7 +172,7 @@ local function init()
                     'black',
                     'gitlint',
                 },
-                automatic_setup = true,
+                automatic_setup = false,
             })
             mason_null_ls.setup_handlers()
 
