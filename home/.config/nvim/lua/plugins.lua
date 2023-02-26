@@ -135,6 +135,13 @@ local function init()
                     lspconfig[server_name].setup({
                         capabilities = capabilities,
                     })
+                end,
+                terraformls = function()
+                    lspconfig.terraformls.setup({
+                        capabilities = capabilities,
+                        filetypes = { "hcl" },
+                        root_dir = lspconfig.util.root_pattern('main.tf')
+                    })
                 end
             })
 

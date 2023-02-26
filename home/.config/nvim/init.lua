@@ -68,3 +68,11 @@ local map = function(key)
 end
 
 map {'n', '<Leader>,<space>', '<Cmd>nohlsearch<CR>'}
+
+vim.api.nvim_create_autocmd({ "BufRead",
+"BufNewFile"}, {
+    pattern = {"*.tf"},
+    callback = function()
+        vim.opt_local.filetype = "hcl"
+    end,
+})
