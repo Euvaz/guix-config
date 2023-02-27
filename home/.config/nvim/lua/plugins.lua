@@ -22,7 +22,7 @@ local function init()
                     'cpp',
                     'dockerfile',
                     'go',
-                    'hcl',
+                    'terraform',
                     'markdown',
                     'python',
                     'latex',
@@ -139,7 +139,7 @@ local function init()
                 terraformls = function()
                     lspconfig.terraformls.setup({
                         capabilities = capabilities,
-                        filetypes = { "hcl" },
+                        filetypes = { "terraform" },
                         root_dir = lspconfig.util.root_pattern('main.tf')
                     })
                 end
