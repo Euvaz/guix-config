@@ -25,7 +25,6 @@ direnv hook fish | source
 
 # Setting environment variables
 set -x EDITOR nvim
-set -x GO111MODULE off
 
 # Setting path variables
 set -x GOPATH $HOME/go
