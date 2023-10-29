@@ -17,7 +17,6 @@ end
 
 # Aliases
 alias k='kubecolor'
-alias kw='vdy kubectl get'
 #abbr --add --global k 'kubectl'
 
 # Direnv
@@ -32,6 +31,3 @@ set -x GOPATH $HOME/go
 set -x GOBIN $GOPATH/bin
 set -x PATH $PATH $GOPATH/bin $HOME/.local/bin
 
-function vdy --description 'modern watch'
-    viddy -d -n 2 --shell fish $argv[1..-1]
-end
