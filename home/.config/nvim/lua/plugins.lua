@@ -157,47 +157,6 @@ local function init()
         end,
     })
     use({
-        'jay-babu/mason-null-ls.nvim',
-        requires = {
-            'williamboman/mason.nvim',
-            'jose-elias-alvarez/null-ls.nvim',
-        },
-        config = function()
-            local mason_null_ls = require('mason-null-ls')
-            local null_ls = require('null-ls')
-
-            mason_null_ls.setup({
-                ensure_installed = {
-                    'stylua',
-                    'black',
-                    'gitlint',
-                },
-                automatic_setup = false,
-            })
-            mason_null_ls.setup_handlers()
-
-            null_ls.setup()
-        end,
-    })
-    use({
-        'jayp0521/mason-nvim-dap.nvim',
-        requires = {
-            'williamboman/mason.nvim',
-            'mfussenegger/nvim-dap',
-        },
-        config = function()
-            local mason_nvim_dap = require('mason-nvim-dap')
-
-            mason_nvim_dap.setup({
-                ensure_installed = {
-                    'python',
-                },
-                automatic_setup = true,
-            })
-            mason_nvim_dap.setup_handlers()
-        end,
-    })
-    use({
         'hrsh7th/nvim-cmp',
         requires = {
             'L3MON4D3/LuaSnip',
