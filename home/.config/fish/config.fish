@@ -1,4 +1,4 @@
-# Start X at login
+# Start X at Login
 if status is-login
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
         exec startx -- -keeptty
@@ -6,7 +6,7 @@ if status is-login
 end
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    # Commands to Run in Interactive Sessions
 end
 
 function fish_greeting
@@ -15,18 +15,21 @@ function fish_greeting
     echo "Last login [$llt on $lls]"
 end
 
+function fish_right_prompt
+    # Intentionally Left Blank
+end
+
 # Aliases
-alias k='kubecolor'
-#abbr --add --global k 'kubectl'
+abbr --add --global k "kubecolor"
 
 # Direnv
 direnv hook fish | source
 
-# Setting environment variables
+# Setting Environment Variables
 set -x EDITOR nvim
 set -x GO111MODULE on
 
-# Setting path variables
+# Setting Path Variables
 set -x GOPATH $HOME/go
 set -x GOBIN $GOPATH/bin
 set -x PATH $PATH $GOPATH/bin $HOME/.local/bin
