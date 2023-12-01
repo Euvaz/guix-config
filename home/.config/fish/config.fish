@@ -20,7 +20,8 @@ function fish_right_prompt
 end
 
 # Aliases
-abbr --add --global k "kubecolor"
+alias kubectl="kubecolor"
+abbr --add --global k "kubectl"
 
 # Direnv
 direnv hook fish | source
