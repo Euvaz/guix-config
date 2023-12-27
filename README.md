@@ -11,5 +11,5 @@ This repository hosts valuable configuration files that I would like to be ident
 ## Execution
 
 ```
-$ ansible-playbook -i hosts.yaml init.yaml --ask-become-pass
+$ ansible-playbook --inventory ansible/inventories/hosts.yaml ansible/playbooks/sync-dotfiles.yaml --ask-become-pass
 ```
