@@ -1,9 +1,8 @@
 ---
-- hosts:
-    - main
+- hosts: main
   connection: local
   pre_tasks:
-    - name: "Install dependencies"
+    - name: "Install Dependencies"
       become: true
       ansible.builtin.package:
         name:
@@ -13,9 +12,6 @@
           - neovim
           - tmux
         state: latest
-- hosts:
-    - main
-  connection: local
   roles:
-    - ext
     - symlink
+

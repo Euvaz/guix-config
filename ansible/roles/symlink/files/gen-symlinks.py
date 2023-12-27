@@ -11,3 +11,4 @@ for candidate in basedir.rglob("*"):
         target.unlink(missing_ok=True)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.symlink_to(candidate.absolute())
+

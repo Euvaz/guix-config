@@ -1,0 +1,8 @@
+---
+- name: Symlink
+  block:
+    - name: Symlink | Generate Symbolic Links
+      ansible.builtin.script:
+        executable: python
+        cmd: gen-symlinks.py
+
