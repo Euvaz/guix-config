@@ -2,7 +2,7 @@
 
 A minimal repository dedicated to hosting my Linux dotfiles.
 
-Utilizing [Ansible](https://www.ansible.com/) and a [Bash](https://www.gnu.org/software/bash/) script in order to handle dependencies and perform configuration tasks.
+Utilizing a minimal [Python](https://www.python.org/) script in order to perform configuration tasks.
 
 ## How it works
 
@@ -11,5 +11,5 @@ This repository hosts valuable configuration files that I would like to be ident
 ## Execution
 
 ```
-$ ansible-playbook --inventory ansible/inventories/hosts.yaml ansible/playbooks/sync-dotfiles.yaml --ask-become-pass
+$ python gen-symlinks.py
 ```
