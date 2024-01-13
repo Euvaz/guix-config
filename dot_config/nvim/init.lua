@@ -5,7 +5,7 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 -- Disable Shortmessage
-vim.opt.shortmess:append('I')
+vim.opt.shortmess:append("I")
 
 -- Line Numbering
 vim.opt.number = true
@@ -32,38 +32,17 @@ vim.opt.tabstop = 4
 vim.opt.expandtab = true
 
 -- Scroll Functionality
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 -- Theming
 vim.opt.termguicolors = true
-vim.opt.background = 'dark'
-
-vim.api.nvim_create_user_command('PackerInstall', function()
-    vim.cmd([[packadd packer.nvim]])
-	require('plugins').install()
-end, { bang = true })
-vim.api.nvim_create_user_command('PackerUpdate', function()
-	vim.cmd([[packadd packer.nvim]])
-	require('plugins').update()
-end, { bang = true })
-vim.api.nvim_create_user_command('PackerSync', function()
-	vim.cmd([[packadd packer.nvim]])
-	require('plugins').sync()
-end, { bang = true })
-vim.api.nvim_create_user_command('PackerClean', function()
-	vim.cmd([[packadd packer.nvim]])
-	require('plugins').clean()
-end, { bang = true })
-vim.api.nvim_create_user_command('PackerCompile', function()
-	vim.cmd([[packadd packer.nvim]])
-	require('plugins').compile()
-end, { bang = true })
+vim.opt.background = "dark"
 
 local map = function(key)
   -- Get extra options
   local opts = { noremap = true }
   for i, v in pairs(key) do
-    if type(i) == 'string' then opts[i] = v end
+    if type(i) == "string" then opts[i] = v end
   end
 
   -- Support for buffer-scoped keybindings
@@ -77,4 +56,4 @@ local map = function(key)
   end
 end
 
-map {'n', '<Leader>,<space>', '<Cmd>nohlsearch<CR>'}
+map { "n", "<Leader>,<space>", "<Cmd>nohlsearch<CR>" }
