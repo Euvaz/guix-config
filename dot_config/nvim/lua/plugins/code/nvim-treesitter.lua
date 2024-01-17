@@ -19,6 +19,7 @@ return {
                     "markdown",
                     "python",
                     "scss",
+                    "sql",
                     "templ",
                     "toml",
                     "vim",
