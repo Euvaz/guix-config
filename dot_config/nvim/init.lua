@@ -1,13 +1,13 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable",
-        lazypath,
-    })
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -40,21 +40,22 @@ vim.opt.termguicolors = true
 vim.opt.background = "dark"
 
 local map = function(key)
-    -- Get extra options
-    local opts = { noremap = true }
-    for i, v in pairs(key) do
-        if type(i) == "string" then opts[i] = v end
-    end
+  -- Get extra options
+  local opts = { noremap = true }
+  for i, v in pairs(key) do
+    if type(i) == "string" then opts[i] = v end
+  end
 
-    -- Support for buffer-scoped keybindings
-    local buffer = opts.buffer
-    opts.buffer = nil
+  -- Support for buffer-scoped keybindings
+  local buffer = opts.buffer
+  opts.buffer = nil
 
-    if buffer then
-        vim.api.nvim_buf_set_keymap(0, key[1], key[2], key[3], opts)
-    else
-        vim.api.nvim_set_keymap(key[1], key[2], key[3], opts)
-    end
+  if buffer then
+    vim.api.nvim_buf_set_keymap(0, key[1], key[2], key[3], opts)
+  else
+    vim.api.nvim_set_keymap(key[1], key[2], key[3], opts)
+  end
 end
 
 map { "n", "<Leader>,<space>", "<Cmd>nohlsearch<CR>" }
+
