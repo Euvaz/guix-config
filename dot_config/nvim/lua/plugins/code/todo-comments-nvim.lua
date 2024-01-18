@@ -5,7 +5,7 @@ return {
       "folke/trouble.nvim",
       "nvim-lua/plenary.nvim",
     },
-    opts = {}
+    opts = {},
   },
 }
 
