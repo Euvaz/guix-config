@@ -7,6 +7,7 @@ return {
       nvim_treesitter.setup({
         ensure_installed = {
           "bash",
+          "cue"
           "css",
           "dockerfile",
           "gitignore",
