@@ -17,6 +17,7 @@ return {
           "ansiblels",
           "bashls",
           "clangd",
+          "dagger",
           "dockerls",
           "gopls",
           "marksman",
