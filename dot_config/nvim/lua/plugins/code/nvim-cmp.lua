@@ -13,7 +13,7 @@ return {
       local cmp = require("cmp")
       local defaults = require("cmp.config.default")()
       return {
-        auto_brackets = {}, -- configure any filetype to auto add brackets
+        auto_brackets = {},
         completion = {
           completeopt = "menu,menuone,noinsert",
         },
@@ -24,11 +24,11 @@ return {
           ["<C-f>"] = cmp.mapping.scroll_docs(4),
           ["<C-Space>"] = cmp.mapping.complete(),
           ["<C-e>"] = cmp.mapping.abort(),
-          ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
           ["<S-CR>"] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
-          }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+          }),
           ["<C-CR>"] = function(fallback)
             cmp.abort()
             fallback()
@@ -57,7 +57,6 @@ return {
         sorting = defaults.sorting,
       }
     end,
-    ---@param opts cmp.ConfigSchema | {auto_brackets?: string[]}
     config = function(_, opts)
       for _, source in ipairs(opts.sources) do
         source.group_index = source.group_index or 1
