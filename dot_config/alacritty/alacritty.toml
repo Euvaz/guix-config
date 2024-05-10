@@ -31,9 +31,6 @@ magenta = "#f4005f"
 cyan    = "#58d1eb"
 white   = "#f6f6ef"
 
-[cursor.style]
-shape = "Beam"
-
 [env]
 TERM = "screen-256color"
 WINIT_X11_SCALE_FACTOR = "1.25"
