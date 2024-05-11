@@ -1,6 +1,6 @@
 local plugins_group = "plugins.theme."
 
 return {
-  require(plugins_group .. "nvim"),
+  require(plugins_group .. "catppuccin"),
 }
 
