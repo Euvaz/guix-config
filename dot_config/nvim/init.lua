@@ -39,6 +39,9 @@ vim.opt.mouse = "a"
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
 
+-- Colorscheme
+vim.cmd.colorscheme "catppuccin"
+
 local map = function(key)
   -- Get extra options
   local opts = { noremap = true }
