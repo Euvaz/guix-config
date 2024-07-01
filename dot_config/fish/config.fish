@@ -34,4 +34,3 @@ set -x GO111MODULE on
 set -x GOPATH $HOME/go
 set -x GOBIN $GOPATH/bin
 set -gx PATH $PATH $GOPATH/bin $HOME/.local/bin $HOME/.krew/bin
-
