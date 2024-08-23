@@ -1,0 +1,26 @@
+# Define Aliases
+alias ls="exa"
+alias kubectl="kubecolor"
+alias k="kubecolor"
+
+# Direnv Hook
+eval "$(direnv hook zsh)"
+
+# Extended Pattern Matching
+setopt autocd extendedglob nomatch
+
+# Disable Error Beep
+unsetopt beep
+
+# Set "Vi mode"
+bindkey -v
+
+# Enable Completion
+zstyle ":completion:*" completer _complete _ignored
+zstyle :compinstall filename "$HOME/.zshrc"
+autoload -Uz compinit
+compinit
+
+# Customize Prompt
+setopt PROMPT_SUBST
+PROMPT="%F{green}%n@%m%f %F{blue}%-40<…<%~%<<%f %F{cyan}>%f "
