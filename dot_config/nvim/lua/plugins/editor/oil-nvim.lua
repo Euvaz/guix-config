@@ -7,7 +7,7 @@ return {
   cmd = "Oil",
   keys = {
     { "-", "<Cmd>Oil<CR>", desc = "Open parent directory" },
-    { "<Space>-", function() require("oil").toggle_float() end, desc = "Open oil window" },
+    { "<Space>-", function() require("oil").toggle_float() end, desc = "Open oil window" }
   },
   init = function()
     if vim.fn.argc() == 1 then
@@ -28,7 +28,7 @@ return {
             require "oil"
             vim.api.nvim_del_augroup_by_id(augroup)
           end
-        end,
+        end
       })
     end
   end,
@@ -37,10 +37,10 @@ return {
     columns = { "icon" },
     keymaps = {
       ["<C-h>"] = false,
-      ["<M-h>"] = "actions.select_split",
+      ["<M-h>"] = "actions.select_split"
     },
     view_options = {
-      show_hidden = true,
-    },
-  },
+      show_hidden = true
+    }
+  }
 }
