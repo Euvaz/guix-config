@@ -1,10 +1,12 @@
+---@type LazySpec
 return {
-  "williamboman/mason-lspconfig.nvim",
+  "neovim/nvim-lspconfig",
+  event = { "BufNewFile", "BufReadPost", "BufWritePost" },
   dependencies = {
     "williamboman/mason.nvim",
-    "neovim/nvim-lspconfig"
+    { "williamboman/mason-lspconfig.nvim", config = function() end },
   },
-  config = function()
+  opts = function()
     local mason = require("mason")
     mason.setup()
 
@@ -40,6 +42,7 @@ return {
       end
     })
   end,
+  config = function(_, opts) end,
   keys = {
     { "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>" },
     { "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>" },

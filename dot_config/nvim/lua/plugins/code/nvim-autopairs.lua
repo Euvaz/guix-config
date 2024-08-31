@@ -1,8 +1,6 @@
+---@type LazySpec
 return {
   "windwp/nvim-autopairs",
-  dependencies = {
-    "hrsh7th/nvim-cmp"
-  },
   config = function()
     local autopairs = require("nvim-autopairs")
     local cmp_autopairs = require("nvim-autopairs.completion.cmp")

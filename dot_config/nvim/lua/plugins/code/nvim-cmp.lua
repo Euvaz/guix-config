@@ -1,10 +1,10 @@
+---@type LazySpec
 return {
   "hrsh7th/nvim-cmp",
-  version = false,
   event = "InsertEnter",
   dependencies = {
-    "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-path"
   },
   opts = function()
@@ -24,9 +24,9 @@ return {
       }),
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
-        { name = "path" }
       }, {
-        { name = "buffer" }
+        { name = "buffer" },
+        { name = "path" }
       })
     }
   end
