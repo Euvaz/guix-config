@@ -12,7 +12,24 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local lazy = require("lazy")
-lazy.setup("plugins")
+lazy.setup({
+  spec = {
+    { import = "plugins" }
+  },
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "gzip",
+        "netrwPlugin",
+        "rplugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin"
+      }
+    }
+  }
+})
 
 -- Disable Shortmessage
 vim.opt.shortmess:append("I")
@@ -38,6 +55,10 @@ vim.opt.mouse = "a"
 -- Theming
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
+
+-- Spellchecking
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 
 -- Colorscheme
 vim.cmd.colorscheme "catppuccin"
