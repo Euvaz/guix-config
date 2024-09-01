@@ -1,7 +1,7 @@
 ---@type LazySpec
 return {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
+  event = { "BufNewFile", "BufReadPost", "BufWritePost" },
   config = function()
     local nvim_treesitter = require("nvim-treesitter.configs")
     nvim_treesitter.setup({
@@ -31,5 +31,6 @@ return {
       highlight = { enable = true },
       indent = { enable = true }
     })
-  end
+  end,
+  build = ":TSUpdate"
 }
