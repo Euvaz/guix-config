@@ -15,12 +15,19 @@ unsetopt beep
 # Set "Vi mode"
 bindkey -v
 
+# Enable Searching History
+bindkey "^R" history-incremental-search-backward
+
 # Enable Completion
 zstyle ":completion:*" completer _complete _ignored
-zstyle :compinstall filename "$HOME/.zshrc"
+zstyle :compinstall filename "$HOME/.config/zsh/.zshrc"
 autoload -Uz compinit
 compinit
 
 # Customize Prompt
 setopt PROMPT_SUBST
 PROMPT="%F{green}%n@%m%f %F{blue}%-40<…<%~%<<%f %F{cyan}>%f "
+
+# Kubectl Completion
+source <(kubectl completion zsh)
+compdef kubecolor=kubectl
