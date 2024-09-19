@@ -17,6 +17,8 @@ bindkey -v
 
 # Enable Searching History
 bindkey "^R" history-incremental-pattern-search-backward
+bindkey "\e[A" history-search-backward
+bindkey "\e[B" history-search-forward
 
 # Enable Completion
 zstyle ":completion:*" completer _complete _ignored
