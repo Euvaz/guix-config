@@ -16,7 +16,7 @@ unsetopt beep
 bindkey -v
 
 # Enable Searching History
-bindkey "^R" history-incremental-search-backward
+bindkey "^R" history-incremental-pattern-search-backward
 
 # Enable Completion
 zstyle ":completion:*" completer _complete _ignored
