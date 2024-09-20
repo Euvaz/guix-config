@@ -15,10 +15,13 @@ unsetopt beep
 # Set "Vi mode"
 bindkey -v
 
-# Enable Searching History
+# History Searching
 bindkey "^R" history-incremental-pattern-search-backward
 bindkey "\e[A" history-search-backward
 bindkey "\e[B" history-search-forward
+
+# History Tweaks
+setopt HIST_IGNORE_ALL_DUPS
 
 # Enable Completion
 zstyle ":completion:*" completer _complete _ignored
