@@ -28,3 +28,6 @@
       (list (service home-dotfiles-service-type
                      (home-dotfiles-configuration
                        (directories '("../../files/"))))))))
+
+;; Instantiate Guix Home
+%guix-home
