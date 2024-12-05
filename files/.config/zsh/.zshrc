@@ -1,7 +1,6 @@
 # Define Aliases
 alias ls="eza"
-alias kubectl="kubecolor"
-alias k="kubecolor"
+alias k="kubectl"
 
 # Direnv Hook
 eval "$(direnv hook zsh)"
