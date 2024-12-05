@@ -1,5 +1,5 @@
 # Define Aliases
-alias ls="exa"
+alias ls="eza"
 alias kubectl="kubecolor"
 alias k="kubecolor"
 
