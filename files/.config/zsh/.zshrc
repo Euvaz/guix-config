@@ -25,7 +25,7 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # Enable Completion
 zstyle ":completion:*" completer _complete _ignored
-zstyle :compinstall filename "$HOME/.config/zsh/.zshrc"
+zstyle :compinstall filename "${HOME}/.config/zsh/.zshrc"
 autoload -Uz compinit
 compinit
 
