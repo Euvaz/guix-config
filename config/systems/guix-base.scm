@@ -41,10 +41,10 @@
                     (home-directory "/home/guix-user")
                     (supplementary-groups '("wheel" "netdev" "audio" "video")))
                   %base-user-accounts))
-
+  
     ;; Base packages
     (packages %guix-base-packages)
-
+  
     ;; Base services
     (services %base-services)))
 
