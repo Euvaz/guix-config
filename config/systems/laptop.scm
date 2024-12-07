@@ -1,10 +1,9 @@
 (define-module (config systems laptop)
                #:use-module (gnu)
-               ; #:use-module (gnu home)
                #:use-module (gnu packages firmware)
                #:use-module (gnu packages terminals)
                #:use-module (gnu services desktop)
-               #:use-module (gnu services guix) ; B
+               #:use-module (gnu services guix)
                #:use-module (gnu services virtualization)
 
                #:use-module (nongnu packages linux)
