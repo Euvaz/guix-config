@@ -6,13 +6,19 @@
                #:use-module (gnu home services shells)
                #:use-module (gnu home services sound)
                #:use-module (gnu packages terminals)
+               #:use-module (gnu packages wm)
 
                #:export (%guix-home))
 
 (define %guix-home
   (home-environment
     (packages
-      (list foot))
+      (list foot
+            sway
+            swaybg
+            swayidle
+            swaylock
+            wmenu))
 
     (services
       (list (service home-dotfiles-service-type
