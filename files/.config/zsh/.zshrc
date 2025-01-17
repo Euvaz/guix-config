@@ -11,8 +11,8 @@ setopt autocd extendedglob nomatch
 # Disable Error Beep
 unsetopt beep
 
-# Set "Vi mode"
-bindkey -v
+# Set "Emacs mode"
+bindkey -e
 
 # History Searching
 bindkey "^R" history-incremental-pattern-search-backward
