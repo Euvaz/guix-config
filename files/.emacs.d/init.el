@@ -9,7 +9,7 @@
 
 ;; Load theme and define font
 (load-theme 'wombat)
-(set-face-attribute 'default nil :font "Fira Code" :height 160))
+(set-face-attribute 'default nil :font "Fira Code" :height 160)
 
 ;; Install and configure Magit
 (use-package magit
