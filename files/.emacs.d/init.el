@@ -24,7 +24,7 @@
                          ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
 
-;; Install and configure Magit
+;; Install and configure magit
 (use-package magit
   :ensure t)
 
@@ -33,6 +33,7 @@
   :ensure t
   :commands (lsp lsp-deferred))
 
+;; Install and configure treesit-auto
 (use-package treesit-auto
   :ensure t
   :custom
@@ -42,6 +43,7 @@
   (treesit-auto-add-to-auto-mode-alist 'all)
   (global-treesit-auto-mode))
 
+;; Define tree-sitter language sources
 (setq treesit-language-source-alist
       '((bash . ("https://github.com/tree-sitter/tree-sitter-bash" "master" "src"))
         (commonlisp ("https://github.com/theHamsta/tree-sitter-commonlisp" "master" "src"))
