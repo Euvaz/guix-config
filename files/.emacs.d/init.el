@@ -35,6 +35,8 @@
 
 (use-package treesit-auto
   :ensure t
+  :custom
+  (treesit-auto-install 'prompt)
   :config
   (setq treesit-auto-langs '(bash commonlisp elisp go go-mod python yaml))
   (treesit-auto-add-to-auto-mode-alist 'all)
