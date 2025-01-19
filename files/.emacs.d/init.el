@@ -26,15 +26,18 @@
 
 ;; Install and configure magit
 (use-package magit
+  :defer t
   :ensure t)
 
 ;; Install and configure lsp-mode
 (use-package lsp-mode
+  :defer t
   :ensure t
   :commands (lsp lsp-deferred))
 
 ;; Install and configure treesit-auto
 (use-package treesit-auto
+  :defer t
   :ensure t
   :custom
   (treesit-auto-install 'prompt)
@@ -44,11 +47,12 @@
   (global-treesit-auto-mode))
 
 ;; Define tree-sitter language sources
-(setq treesit-language-source-alist
-      '((bash . ("https://github.com/tree-sitter/tree-sitter-bash" "master" "src"))
-        (commonlisp ("https://github.com/theHamsta/tree-sitter-commonlisp" "master" "src"))
-        (elisp . ("https://github.com/Wilfred/tree-sitter-elisp" "main" "src"))
-        (go . ("https://github.com/tree-sitter/tree-sitter-go" "master" "src"))
-        (go-mod . ("https://github.com/camdencheek/tree-sitter-go-mod" "main" "src"))
-        (python . ("https://github.com/tree-sitter/tree-sitter-python" "master" "src"))
-        (yaml . ("https://github.com/ikatyang/tree-sitter-yaml" "master" "src"))))
+(with-eval-after-load 'treesit-auto
+  (setq treesit-language-source-alist
+        '((bash . ("https://github.com/tree-sitter/tree-sitter-bash" "master" "src"))
+          (commonlisp ("https://github.com/theHamsta/tree-sitter-commonlisp" "master" "src"))
+          (elisp . ("https://github.com/Wilfred/tree-sitter-elisp" "main" "src"))
+          (go . ("https://github.com/tree-sitter/tree-sitter-go" "master" "src"))
+          (go-mod . ("https://github.com/camdencheek/tree-sitter-go-mod" "main" "src"))
+          (python . ("https://github.com/tree-sitter/tree-sitter-python" "master" "src"))
+          (yaml . ("https://github.com/ikatyang/tree-sitter-yaml" "master" "src")))))
