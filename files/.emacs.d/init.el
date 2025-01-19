@@ -8,7 +8,7 @@
 (load custom-file 'noerror)
 
 ;; Define indentation rules
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 ;; Display line numbers
 (setq display-line-numbers-type 'relative)
