@@ -7,6 +7,9 @@
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
 
+;; Disable backup files
+(setq make-backup-files nil)
+
 ;; Define indentation rules
 (setq-default indent-tabs-mode nil)
 
