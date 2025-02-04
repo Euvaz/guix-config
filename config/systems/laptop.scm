@@ -3,7 +3,9 @@
                #:use-module (gnu packages firmware)
                #:use-module (gnu services desktop)
                #:use-module (gnu services guix)
+               #:use-module (gnu services xorg)
                #:use-module (gnu services virtualization)
+               #:use-module (gnu system nss)
 
                #:use-module (nongnu packages linux)
                #:use-module (nongnu system linux-initrd)
@@ -67,17 +69,22 @@
 
     ;; Desktop environment, virtualization, and base services
     (services
-      (append
-        (list (service guix-home-service-type
-                       `((,%user-name ,%guix-home)))
-              (service xfce-desktop-service-type)
-              (service libvirt-service-type)
-              (service virtlog-service-type)
-              (extra-special-file "/usr/share/OVMF/OVMF_CODE.fd"
-                                  (file-append ovmf "/share/firmware/ovmf_code_x64.bin"))
-              (extra-special-file "/usr/share/OVMF/OVMF_VARS.fd"
-                                  (file-append ovmf "/share/firmware/ovmf_vars_x64.bin")))
-        %desktop-services))))
+     (cons*
+      (service guix-home-service-type
+               `((,%user-name ,%guix-home)))
+      (service xfce-desktop-service-type)
+      (service libvirt-service-type)
+      (service virtlog-service-type)
+      (extra-special-file "/usr/share/OVMF/OVMF_CODE.fd"
+                          (file-append ovmf "/share/firmware/ovmf_code_x64.bin"))
+      (extra-special-file "/usr/share/OVMF/OVMF_VARS.fd"
+                          (file-append ovmf "/share/firmware/ovmf_vars_x64.bin"))
+      (modify-services %desktop-services
+                       ;; Remove gdm-service-type
+                       (delete gdm-service-type))))
+
+    ;; Allow DNS resolution of .local hosts
+    (name-service-switch %mdns-host-lookup-nss)))
 
 ;; Instantiate Guix
 %guix
