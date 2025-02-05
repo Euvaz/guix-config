@@ -72,7 +72,6 @@
      (cons*
       (service guix-home-service-type
                `((,%user-name ,%guix-home)))
-      (service xfce-desktop-service-type)
       (service libvirt-service-type)
       (service virtlog-service-type)
       (extra-special-file "/usr/share/OVMF/OVMF_CODE.fd"
