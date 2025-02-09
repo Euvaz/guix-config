@@ -25,6 +25,7 @@
     (list (service home-dotfiles-service-type
                    (home-dotfiles-configuration
                     (directories '("../../files/"))))
+          (service home-environment-variables-configuration-service-type)
           (service home-bash-service-type)
           (service home-pipewire-service-type)
           (service home-dbus-service-type)))))
