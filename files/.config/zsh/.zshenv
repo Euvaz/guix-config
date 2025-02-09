@@ -10,7 +10,7 @@ export VISUAL="emacs"
 
 # Go
 export GO111MODULE="on"
-export GOPATH="${HOME}/go/"
+export GOPATH="${HOME}/go"
 
 # Path
 export PATH="${PATH}:${GOPATH}/bin"
