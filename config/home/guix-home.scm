@@ -23,7 +23,7 @@
     (services
       (list (service home-dotfiles-service-type
                      (home-dotfiles-configuration
-                       (directories '("../../files/"))))
+                      (directories '("../../files/"))))
             (service home-bash-service-type)
             (service home-pipewire-service-type)
             (service home-dbus-service-type)))))
