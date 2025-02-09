@@ -4,16 +4,16 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
-# Path
-export PATH="${PATH}"
-
 # Editor
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="emacs"
+export VISUAL="emacs"
 
 # Go
 export GO111MODULE="on"
 export GOPATH="${HOME}/go/"
+
+# Path
+export PATH="${PATH}:${GOPATH}/bin"
 
 # History
 export HISTFILE="${ZDOTDIR}/.histfile"
