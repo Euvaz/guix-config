@@ -42,7 +42,15 @@
   :custom
   (treesit-auto-install 'prompt)
   :config
-  (setq treesit-auto-langs '(bash commonlisp elisp go gomod python yaml))
+  (setq treesit-auto-langs '(bash
+                             commonlisp
+                             css
+                             elisp
+                             go
+                             gomod
+                             html
+                             python
+                             yaml))
   (treesit-auto-add-to-auto-mode-alist 'all)
   (global-treesit-auto-mode))
 
@@ -50,8 +58,10 @@
 (setq treesit-language-source-alist
       '((bash . ("https://github.com/tree-sitter/tree-sitter-bash" "master" "src"))
         (commonlisp . ("https://github.com/theHamsta/tree-sitter-commonlisp" "master" "src"))
+        (css . ("https://github.com/tree-sitter/tree-sitter-css" "master" "src"))
         (elisp . ("https://github.com/Wilfred/tree-sitter-elisp" "main" "src"))
         (go . ("https://github.com/tree-sitter/tree-sitter-go" "master" "src"))
         (gomod . ("https://github.com/camdencheek/tree-sitter-go-mod" "main" "src"))
+        (html . ("https://github.com/tree-sitter/tree-sitter-html" "master" "src"))
         (python . ("https://github.com/tree-sitter/tree-sitter-python" "master" "src"))
         (yaml . ("https://github.com/ikatyang/tree-sitter-yaml" "master" "src"))))
