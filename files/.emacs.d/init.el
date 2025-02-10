@@ -49,7 +49,7 @@
 ;; Define tree-sitter language sources
 (setq treesit-language-source-alist
       '((bash . ("https://github.com/tree-sitter/tree-sitter-bash" "master" "src"))
-        (commonlisp ("https://github.com/theHamsta/tree-sitter-commonlisp" "master" "src"))
+        (commonlisp . ("https://github.com/theHamsta/tree-sitter-commonlisp" "master" "src"))
         (elisp . ("https://github.com/Wilfred/tree-sitter-elisp" "main" "src"))
         (go . ("https://github.com/tree-sitter/tree-sitter-go" "master" "src"))
         (gomod . ("https://github.com/camdencheek/tree-sitter-go-mod" "main" "src"))
