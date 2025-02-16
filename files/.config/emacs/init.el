@@ -18,7 +18,7 @@
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
 ;; Load theme and define font
-(load-theme 'wombat)
+(load-theme 'modus-vivendi)
 (set-face-attribute 'default nil :font "Fira Code" :height 160)
 
 ;; Initialize package archives
