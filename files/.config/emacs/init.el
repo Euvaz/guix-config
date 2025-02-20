@@ -36,6 +36,10 @@
   :ensure t
   :commands (lsp lsp-deferred))
 
+;; Install and configure zig-mode
+(use-package zig-mode
+  :ensure t)
+
 ;; Define tree-sitter language sources
 (setq treesit-language-source-alist
       '((bash . ("https://github.com/tree-sitter/tree-sitter-bash"))
@@ -50,3 +54,6 @@
 (dolist (source treesit-language-source-alist)
   (unless (treesit-language-available-p (car source))
     (treesit-install-language-grammar (car source))))
+
+;; Add file extension associations
+(add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-mode))
