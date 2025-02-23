@@ -1,5 +1,5 @@
 ---@type LazySpec
 return {
-  "nvim-telescope/telescope.nvim",
-  cmd = "Telescope"
+    "nvim-telescope/telescope.nvim",
+    cmd = "Telescope"
 }
