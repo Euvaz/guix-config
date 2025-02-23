@@ -18,7 +18,7 @@
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
 ;; Load theme and define font
-(load-theme 'modus-vivendi)
+(load-theme 'modus-vivendi t)
 (set-face-attribute 'default nil :font "Fira Code" :height 160)
 
 ;; Initialize package archives
@@ -27,20 +27,23 @@
                          ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
 
-;; Install and configure magit
+;; Package configuration
 (use-package magit
-  :ensure t)
+  :ensure t
+  :defer t
+  :commands (magit-status magit))
 
-;; Install and configure lsp-mode
 (use-package lsp-mode
   :ensure t
+  :defer t
   :commands (lsp lsp-deferred))
 
-;; Install and configure zig-mode
 (use-package zig-mode
-  :ensure t)
+  :ensure t
+  :defer t
+  :mode ("\\.zig\\'" . zig-mode))
 
-;; Define tree-sitter language sources
+;; Tree-sitter language sources
 (setq treesit-language-source-alist
       '((bash . ("https://github.com/tree-sitter/tree-sitter-bash"))
         (css . ("https://github.com/tree-sitter/tree-sitter-css"))
@@ -49,11 +52,3 @@
         (html . ("https://github.com/tree-sitter/tree-sitter-html"))
         (python . ("https://github.com/tree-sitter/tree-sitter-python"))
         (yaml . ("https://github.com/ikatyang/tree-sitter-yaml"))))
-
-;; Install tree-sitter language grammars if not already installed
-(dolist (source treesit-language-source-alist)
-  (unless (treesit-language-available-p (car source))
-    (treesit-install-language-grammar (car source))))
-
-;; Add file extension associations
-(add-to-list 'auto-mode-alist '("\\.zig\\'" . zig-mode))
