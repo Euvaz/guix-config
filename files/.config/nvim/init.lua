@@ -61,7 +61,7 @@ vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 
 -- Colorscheme
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "modus"
 
 local map = function(key)
     -- Get extra options
