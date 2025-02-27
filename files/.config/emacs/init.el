@@ -10,6 +10,9 @@
 ;; Disable backup files
 (setq make-backup-files nil)
 
+;; Enable final newlines
+(setq require-final-newline t)
+
 ;; Define indentation rules
 (setq-default indent-tabs-mode nil)
 
