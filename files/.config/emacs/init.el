@@ -20,6 +20,7 @@
 ;; Load theme and define font
 (load-theme 'modus-vivendi t)
 (set-face-attribute 'default nil :font "Fira Code" :height 160)
+(set-face-attribute 'italic nil :font "Victor Mono" :height 160)
 
 ;; Initialize package archives
 (require 'package)
