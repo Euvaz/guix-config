@@ -1,3 +1,12 @@
+;;; init.el -*- lexical-binding: t; -*-
+;;; Commentary:
+;; Opinionated Emacs config.
+;;; Code:
+
+(setq initial-scratch-message nil
+      initial-major-mode 'emacs-lisp-mode
+      inhibit-startup-screen t)
+
 ;; Disable UI elements
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -97,3 +106,5 @@
         (html . ("https://github.com/tree-sitter/tree-sitter-html"))
         (python . ("https://github.com/tree-sitter/tree-sitter-python"))
         (yaml . ("https://github.com/ikatyang/tree-sitter-yaml"))))
+
+;;; init.el ends here
