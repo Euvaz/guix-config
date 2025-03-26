@@ -8,12 +8,8 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 export EDITOR="emacs"
 export VISUAL="emacs"
 
-# Go
-export GO111MODULE="on"
-export GOPATH="${HOME}/go"
-
 # Path
-export PATH="${PATH}:${GOPATH}/bin"
+export PATH="${PATH}"
 
 # History
 export HISTFILE="${ZDOTDIR}/.histfile"
