@@ -5,8 +5,8 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 # Editor
-export EDITOR="emacs"
-export VISUAL="emacs"
+export EDITOR="emacs -nw"
+export VISUAL="emacs -nw"
 
 # Path
 export PATH="${PATH}"
