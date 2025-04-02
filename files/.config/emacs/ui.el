@@ -8,6 +8,9 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
+;; Theme options
+(setq modus-themes-italic-constructs t)
+
 ;; Load theme and define font
 (load-theme 'modus-vivendi t)
 (set-face-attribute 'default nil :font "Fira Code" :height 160)
