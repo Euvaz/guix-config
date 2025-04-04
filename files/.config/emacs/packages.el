@@ -3,6 +3,9 @@
 ;; Package specification.
 ;;; Code:
 
+(setq use-package-verbose t
+      use-package-compute-statistics t)
+
 (use-package vertico
   :ensure t
   :init
@@ -60,6 +63,63 @@
 (use-package magit
   :ensure t
   :commands (magit-status magit))
+
+(use-package treesit
+  :defer t
+  :init
+  (setq treesit-language-source-alist
+        '((bash "https://github.com/tree-sitter/tree-sitter-bash")
+          (cmake "https://github.com/uyha/tree-sitter-cmake")
+          (css "https://github.com/tree-sitter/tree-sitter-css")
+          (go "https://github.com/tree-sitter/tree-sitter-go")
+          (gomod "https://github.com/camdencheek/tree-sitter-go-mod")
+          (html "https://github.com/tree-sitter/tree-sitter-html")
+          (json "https://github.com/tree-sitter/tree-sitter-json")
+          (python "https://github.com/tree-sitter/tree-sitter-python")
+          (toml "https://github.com/tree-sitter/tree-sitter-toml")
+          (yaml "https://github.com/ikatyang/tree-sitter-yaml"))))
+
+(use-package bash-ts-mode
+  :init
+  (add-to-list 'major-mode-remap-alist '(sh-mode . bash-ts-mode))
+  :mode ("\\.sh\\'" . bash-ts-mode))
+
+(use-package cmake-ts-mode
+  :mode ("\\.cmake\\'" . cmake-ts-mode))
+
+(use-package css-ts-mode
+  :init
+  (add-to-list 'major-mode-remap-alist '(css-mode . css-ts-mode))
+  :mode ("\\.css\\'" . css-ts-mode))
+
+(use-package go-ts-mode
+  :mode ("\\.go\\'" . go-ts-mode))
+
+(use-package go-mod-ts-mode
+  :mode ("go\\.mod\\'" . go-mod-ts-mode))
+
+(use-package html-ts-mode
+  :config
+  (add-to-list 'major-mode-remap-alist '(mhtml-mode . html-ts-mode))
+  :mode ("\\.html\\'" . html-ts-mode))
+
+(use-package json-ts-mode
+  :config
+  (add-to-list 'major-mode-remap-alist '(js-json-mode . json-ts-mode))
+  :mode ("\\.json\\'" . json-ts-mode))
+
+(use-package python-ts-mode
+  :config
+  (add-to-list 'major-mode-remap-alist '(python-mode . python-ts-mode))
+  :mode ("\\.py[iw]?\\'" . python-ts-mode))
+
+(use-package toml-ts-mode
+  :config
+  (add-to-list 'major-mode-remap-alist '(conf-toml-mode . toml-ts-mode))
+  :mode ("\\.toml\\'" . toml-ts-mode))
+
+(use-package yaml-ts-mode
+  :mode ("\\.ya?ml\\'" . yaml-ts-mode))
 
 (use-package zig-mode
   :ensure t
