@@ -3,6 +3,14 @@
 ;; Opinionated Emacs config.
 ;;; Code:
 
+;; Startup
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (message "*** Emacs loaded in %s seconds with %d garbage collections."
+                     (emacs-init-time "%.2f")
+                     gcs-done)))
+
+;; Load files
 (load (concat user-emacs-directory "editor.el"))
 (load (concat user-emacs-directory "packages.el"))
 (load (concat user-emacs-directory "ui.el"))

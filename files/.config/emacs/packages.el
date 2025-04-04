@@ -26,16 +26,27 @@
   (setq corfu-auto t
         corfu-cycle t
         corfu-on-exact-match nil
-        corfu-preselect 'prompt)
+        corfu-preselect 'prompt
+        text-mode-ispell-word-completion nil)
   :bind (:map corfu-map
               ("TAB" . corfu-next)
               ([tab] . corfu-next)
               ("S-TAB" . corfu-previous)
               ([backtab] . corfu-previous)))
 
+(use-package ob
+  :after org
+  :config
+  (setq org-confirm-babel-evaluate nil
+        org-edit-src-content-indentation 0)
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((R . t)
+     (python . t)
+     (shell . t))))
+
 (use-package lsp-mode
   :ensure t
-  :defer t
   :commands (lsp lsp-deferred)
   :config
   (setq gc-cons-threshold 100000000
@@ -48,12 +59,10 @@
 
 (use-package magit
   :ensure t
-  :defer t
   :commands (magit-status magit))
 
 (use-package zig-mode
   :ensure t
-  :defer t
   :mode ("\\.zig\\'" . zig-mode))
 
 ;;; packages.el ends here
