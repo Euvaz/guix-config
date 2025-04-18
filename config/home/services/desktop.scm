@@ -7,7 +7,7 @@
   #:use-module (gnu packages emacs) ; emacs-next-pgtk
   #:use-module (gnu packages emacs-xyz) ; emacs-org-texlive-collection
   #:use-module (gnu packages fonts) ; font-awesome, font-fire-code, font-google-noto-emoji, font-victor-mono
-  #:use-module (gnu packages gnupg) ; pinentry
+  #:use-module (gnu packages gnupg) ; gnupg, pinentry
   #:use-module (gnu packages linux) ; brightnessctl, ebtables, numactl
   #:use-module (gnu packages node) ; node
   #:use-module (gnu packages package-management) ; flatpak
@@ -46,6 +46,7 @@
         font-victor-mono
         foot
         git
+        gnupg
         mullvadbrowser
         node
         numactl
