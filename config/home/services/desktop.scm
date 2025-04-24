@@ -27,6 +27,8 @@
   #:use-module (gnu packages virtualization) ; qemu, virt-manager
   #:use-module (gnu packages wm) ; sway, swaybg, swayidle, swaylock, wmenu
   #:use-module (gnu packages xdisorg) ; wl-clipboaard
+  #:use-module (gnu packages zig) ; zig
+  #:use-module (gnu packages zig-xyz) ; zig-zls
 
   #:export (home-desktop-service-type))
 
@@ -69,6 +71,8 @@
         wmenu
         zathura
         zathura-pdf-mupdf
+        zig
+        zig-zls
         zsh))
 
 (define home-desktop-service-type
