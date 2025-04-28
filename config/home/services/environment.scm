@@ -5,11 +5,8 @@
   #:export (home-environment-variables-configuration-service-type))
 
 (define (home-environment-variables-configuration-gexp config)
-  '(("EDITOR" . "emacs")
-    ("VISUAL" . "emacs")
-    ("GO111MODULE" . "on")
-    ("GOPATH" . "${HOME}/go")
-    ("PATH" . "${PATH}:${GOPATH}/bin")))
+  '(("EDITOR" . "emacs -nw")
+    ("VISUAL" . "emacs -nw")))
 
 (define home-environment-variables-configuration-service-type
   (service-type (name 'home-profile-environment-variables-service)
