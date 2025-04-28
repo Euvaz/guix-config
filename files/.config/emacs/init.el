@@ -19,7 +19,6 @@
 (require 'package)
 (setq package-archives '(("elpa" . "https://elpa.gnu.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
-(package-initialize)
 
 ;; Utilize separate custom-set-variables file
 (setq custom-file (concat user-emacs-directory "custom.el"))
