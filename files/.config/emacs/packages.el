@@ -44,8 +44,7 @@
         org-edit-src-content-indentation 0)
   (org-babel-do-load-languages
    'org-babel-load-languages
-   '((R . t)
-     (python . t)
+   '((python . t)
      (shell . t))))
 
 (use-package magit
