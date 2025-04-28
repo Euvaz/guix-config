@@ -37,6 +37,11 @@
               ("S-TAB" . corfu-previous)
               ([backtab] . corfu-previous)))
 
+(use-package org
+  :config
+  (setq org-todo-keywords '((sequence "TODO(t)" "PROG(p)" "DONE(d)")))
+  :mode ("\\.org\\'" . org-mode))
+
 (use-package ob
   :after org
   :config
