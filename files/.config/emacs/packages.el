@@ -48,18 +48,6 @@
      (python . t)
      (shell . t))))
 
-(use-package lsp-mode
-  :ensure t
-  :commands (lsp lsp-deferred)
-  :config
-  (setq gc-cons-threshold 100000000
-        read-process-output-max (* 1024 1024)
-        lsp-completion-provider :none)
-  (defun corfu-lsp-setup ()
-    (setq-local completion-styles '(orderless)
-                completion-category-defaults nil))
-  (add-hook 'lsp-completion-mode-hook #'corfu-lsp-setup))
-
 (use-package magit
   :ensure t
   :commands (magit-status magit))
