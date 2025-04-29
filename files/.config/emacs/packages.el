@@ -63,6 +63,11 @@
   :ensure t
   :commands (magit-status magit))
 
+(use-package magit-todos
+  :ensure t
+  :after magit
+  :config (magit-todos-mode 1))
+
 (use-package treesit
   :defer t
   :init
