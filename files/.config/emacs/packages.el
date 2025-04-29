@@ -3,6 +3,13 @@
 ;; Package specification.
 ;;; Code:
 
+;; Initialize package archives
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("nongnu" . "https://elpa.nongnu.org/nongnu/")
+                         ("melpa" . "https://melpa.org/packages/")))
+
+;; Bootstrap use-package
+(eval-when-compile (require 'use-package))
 (setq use-package-verbose t
       use-package-compute-statistics t)
 
