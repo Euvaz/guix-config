@@ -1,0 +1,6 @@
+### Input:
+## Keyboard
+input * {
+    ## Set caps-lock to control
+    xkb_options caps:ctrl_modifier
+}

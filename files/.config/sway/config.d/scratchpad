@@ -1,0 +1,6 @@
+### Scratchpad:
+## Move focused window to scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+## Show/hide focused scratchpad window; if multiple scratchpad windows, will cycle through
+bindsym $mod+minus scratchpad show
