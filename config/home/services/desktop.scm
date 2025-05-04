@@ -14,7 +14,6 @@
   #:use-module (gnu packages pdf) ; zathura, zathura-pdf-mupdf
   #:use-module (gnu packages pulseaudio) ; pavucontrol
   #:use-module (gnu packages python) ; python
-  #:use-module (gnu packages python-xyz) ; python-lsp-server
   #:use-module (gnu packages rust-apps) ; eza, ripgrep
   #:use-module (gnu packages shells) ; zsh
   #:use-module (gnu packages shellutils) ; direnv
@@ -28,7 +27,6 @@
   #:use-module (gnu packages wm) ; sway, swaybg, swayidle, swaylock, wmenu
   #:use-module (gnu packages xdisorg) ; wl-clipboaard
   #:use-module (gnu packages zig) ; zig
-  #:use-module (gnu packages zig-xyz) ; zig-zls
 
   #:export (home-desktop-service-type))
 
@@ -57,7 +55,6 @@
         pavucontrol
         pinentry
         python
-        python-lsp-server
         qemu
         r
         ripgrep
@@ -72,7 +69,6 @@
         zathura
         zathura-pdf-mupdf
         zig
-        zig-zls
         zsh))
 
 (define home-desktop-service-type
