@@ -36,7 +36,7 @@
    ;; Mapped devices for encrypted root partition
    (mapped-devices (list (mapped-device
                           (source (uuid
-                                   "acadaf63-afd1-4a00-95c6-2074661ad159"))
+                                   "8acf1a74-f881-42c3-ab4c-6a8e07465b45"))
                           (target "cryptroot")
                           (type luks-device-mapping))))
 
