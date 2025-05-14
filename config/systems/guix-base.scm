@@ -46,7 +46,10 @@
    (packages %guix-base-packages)
 
    ;; Base services
-   (services %base-services)))
+   (services %base-services)
+
+   ;; Allow DNS resolution of .local hosts
+   (name-service-switch %mdns-host-lookup-nss)))
 
 ;; Instantiate Guix Base
 %guix-base
