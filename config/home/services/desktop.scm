@@ -18,12 +18,10 @@
   #:use-module (gnu packages shells) ; zsh
   #:use-module (gnu packages shellutils) ; direnv
   #:use-module (gnu packages ssh) ; openssh
-  #:use-module (gnu packages statistics) ; r
   #:use-module (gnu packages terminals) ; foot
   #:use-module (gnu packages tls) ; openssl
   #:use-module (gnu packages tor-browsers) ; mullvadbrowser
   #:use-module (gnu packages version-control) ; git
-  #:use-module (gnu packages virtualization) ; qemu, virt-manager
   #:use-module (gnu packages wm) ; sway, swaybg, swayidle, swaylock, wmenu
   #:use-module (gnu packages xdisorg) ; wl-clipboaard
   #:use-module (gnu packages zig) ; zig
@@ -55,15 +53,12 @@
         pavucontrol
         pinentry
         python
-        qemu
-        r
         ripgrep
         sway
         swaybg
         swayidle
         swaylock
         unzip
-        virt-manager
         wl-clipboard
         wmenu
         zathura
