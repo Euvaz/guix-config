@@ -60,7 +60,7 @@
                   (supplementary-groups '("wheel" "netdev" "audio" "video")))
                  %base-user-accounts))
 
-   ;; OVMF and base packages
+   ;; Base packages
    (packages %guix-base-packages)
 
    ;; Desktop environment and base services
