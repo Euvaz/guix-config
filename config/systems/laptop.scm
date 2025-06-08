@@ -10,7 +10,9 @@
   #:use-module (nongnu system linux-initrd)
 
   #:use-module (config home guix-home)
-  #:use-module (config systems guix-base))
+  #:use-module (config services substitutes)
+  #:use-module (config systems guix-base)
+  #:use-module (config systems guix-channels))
 
 (define %user-name "virgil")
 
@@ -70,7 +72,11 @@
               `((,%user-name ,%guix-home)))
      (modify-services %desktop-services
                       ;; Remove gdm-service-type
-                      (delete gdm-service-type))))))
+                      (delete gdm-service-type)
+                      (guix-service-type
+                       config =>
+                       (substitutes->services config
+                                              #:channels %guix-channels)))))))
 
 ;; Instantiate Guix
 %guix
