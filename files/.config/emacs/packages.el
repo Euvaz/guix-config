@@ -68,6 +68,12 @@
   :after magit
   :config (magit-todos-mode 1))
 
+(use-package sly
+  :ensure t
+  :commands (sly sly-connect)
+  :config (setq sly-lisp-implementations
+                '((sbcl ("sbcl") :coding-system utf-8-unix))))
+
 (use-package treesit
   :defer t
   :init
