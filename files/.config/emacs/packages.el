@@ -68,6 +68,10 @@
   :after magit
   :config (magit-todos-mode 1))
 
+(use-package geiser-guile
+  :ensure t
+  :commands (geiser geiser-connect))
+
 (use-package sly
   :ensure t
   :commands (sly sly-connect)
