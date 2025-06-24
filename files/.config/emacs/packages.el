@@ -56,8 +56,13 @@
         org-edit-src-content-indentation 0)
   (org-babel-do-load-languages
    'org-babel-load-languages
-   '((python . t)
+   '((ledger . t)
+     (python . t)
      (shell . t))))
+
+(use-package org-contrib
+  :ensure t
+  :after ob)
 
 (use-package magit
   :ensure t
@@ -117,6 +122,10 @@
   :config
   (add-to-list 'major-mode-remap-alist '(js-json-mode . json-ts-mode))
   :mode ("\\.json\\'" . json-ts-mode))
+
+(use-package ledger-mode
+  :ensure t
+  :mode ("\\.ledger\\'" . ledger-mode))
 
 (use-package python-ts-mode
   :config
