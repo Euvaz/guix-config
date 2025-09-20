@@ -1,6 +1,5 @@
 # Define Aliases
 alias ls="eza"
-alias k="kubectl"
 
 # Direnv Hook
 eval "$(direnv hook zsh)"
@@ -32,6 +31,3 @@ compinit
 setopt PROMPT_SUBST
 PROMPT="%F{green}%n@%m%f %F{blue}%-40<…<%~%<<%f %F{cyan}>%f "
 
-# Kubectl Completion
-source <(kubectl completion zsh)
-compdef kubecolor=kubectl
