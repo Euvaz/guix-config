@@ -30,4 +30,3 @@ compinit
 # Customize Prompt
 setopt PROMPT_SUBST
 PROMPT="%F{green}%n@%m%f %F{blue}%-40<…<%~%<<%f %F{cyan}>%f "
-
