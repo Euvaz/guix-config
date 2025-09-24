@@ -39,10 +39,10 @@
         corfu-preselect 'prompt
         text-mode-ispell-word-completion nil)
   :bind (:map corfu-map
-              ("TAB" . corfu-next)
-              ([tab] . corfu-next)
-              ("S-TAB" . corfu-previous)
-              ([backtab] . corfu-previous)))
+              ("TAB" . #'corfu-next)
+              ([tab] . #'corfu-next)
+              ("S-TAB" . #'corfu-previous)
+              ([backtab] . #'corfu-previous)))
 
 (use-package org
   :config
