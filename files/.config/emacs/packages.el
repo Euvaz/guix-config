@@ -77,6 +77,14 @@
   :after magit
   :config (magit-todos-mode 1))
 
+(use-package geiser
+  :ensure t
+  :commands (geiser run-geiser))
+
+(use-package geiser-guile
+  :ensure t
+  :commands (geiser-guile run-guile))
+
 (use-package sly
   :ensure t
   :commands (sly sly-connect)
