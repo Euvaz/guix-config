@@ -60,6 +60,14 @@
    '((python . t)
      (shell . t))))
 
+(use-package emms
+  :ensure t
+  :config
+  (setq emms-player-list '(emms-player-mpv))
+  (emms-all)
+  (emms-add-directory-tree "~/Music")
+  :commands (emms))
+
 (use-package magit
   :ensure t
   :commands (magit-status magit))
