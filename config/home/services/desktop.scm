@@ -8,6 +8,7 @@
   #:use-module (gnu packages emacs-xyz) ; emacs-org-texlive-collection
   #:use-module (gnu packages fonts) ; font-awesome, font-fire-code, font-google-noto-emoji, font-victor-mono
   #:use-module (gnu packages gnupg) ; gnupg, pinentry
+  #:use-module (gnu packages gnuzilla) ; icecat
   #:use-module (gnu packages linux) ; brightnessctl, ebtables, numactl
   #:use-module (gnu packages node) ; node
   #:use-module (gnu packages package-management) ; flatpak
@@ -45,6 +46,7 @@
         foot
         git
         gnupg
+        icecat
         mullvadbrowser
         node
         numactl
