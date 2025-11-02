@@ -1,4 +1,4 @@
-(define-module (config services substitutes)
+(define-module (config systems core substitutes)
   #:use-module (gnu) ; %default-substitute-urls
   #:use-module (gnu packages package-management) ; guix-for-channels
   #:use-module (guix packages) ; origin

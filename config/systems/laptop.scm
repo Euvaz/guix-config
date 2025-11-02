@@ -10,9 +10,9 @@
   #:use-module (nongnu system linux-initrd)
 
   #:use-module (config home guix-home)
-  #:use-module (config services substitutes)
   #:use-module (config systems guix-base)
-  #:use-module (config systems guix-channels))
+  #:use-module (config systems core guix-channels)
+  #:use-module (config systems core substitutes))
 
 (define %user-name "virgil")
 
