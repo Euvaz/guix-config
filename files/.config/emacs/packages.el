@@ -79,7 +79,9 @@
 
 (use-package geiser
   :ensure t
-  :commands (geiser run-geiser))
+  :commands (geiser run-geiser)
+  :config (setq geiser-mode-start-repl-p t
+                geiser-repl-query-on-kill-p nil))
 
 (use-package geiser-guile
   :ensure t
