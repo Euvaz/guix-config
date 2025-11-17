@@ -4,3 +4,9 @@ input * {
     ## Set caps-lock to control
     xkb_options caps:ctrl_modifier
 }
+
+## Touchpad
+input "type:touchpad" {
+    natural_scroll enabled
+    tap enabled
+}
