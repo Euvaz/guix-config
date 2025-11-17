@@ -44,6 +44,10 @@
               ("S-TAB" . #'corfu-previous)
               ([backtab] . #'corfu-previous)))
 
+(use-package smartparens
+  :ensure t
+  :hook (prog-mode text-mode))
+
 (use-package org
   :config
   (setq org-todo-keywords '((sequence "TODO(t)" "PROG(p)" "|" "DONE(d)")
