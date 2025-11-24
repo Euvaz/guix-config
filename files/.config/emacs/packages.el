@@ -101,7 +101,9 @@
   :defer t
   :init
   (setq treesit-language-source-alist
-        '((bash "https://github.com/tree-sitter/tree-sitter-bash")
+        '(
+          (bash "https://github.com/tree-sitter/tree-sitter-bash")
+          (c "https://github.com/tree-sitter/tree-sitter-c")
           (cmake "https://github.com/uyha/tree-sitter-cmake")
           (css "https://github.com/tree-sitter/tree-sitter-css")
           (go "https://github.com/tree-sitter/tree-sitter-go")
@@ -110,7 +112,8 @@
           (json "https://github.com/tree-sitter/tree-sitter-json")
           (python "https://github.com/tree-sitter/tree-sitter-python")
           (toml "https://github.com/tree-sitter/tree-sitter-toml")
-          (yaml "https://github.com/ikatyang/tree-sitter-yaml"))))
+          (yaml "https://github.com/ikatyang/tree-sitter-yaml")
+          )))
 
 (use-package bash-ts-mode
   :init
