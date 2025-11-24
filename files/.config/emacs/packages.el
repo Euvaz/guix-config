@@ -61,8 +61,10 @@
         org-edit-src-content-indentation 0)
   (org-babel-do-load-languages
    'org-babel-load-languages
-   '((python . t)
-     (shell . t))))
+   '(
+     (python . t)
+     (shell . t)
+     )))
 
 (use-package emms
   :ensure t
