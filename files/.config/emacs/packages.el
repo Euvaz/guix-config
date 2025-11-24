@@ -162,8 +162,4 @@
 (use-package yaml-ts-mode
   :mode ("\\.ya?ml\\'" . yaml-ts-mode))
 
-(use-package zig-mode
-  :ensure t
-  :mode ("\\.zig\\'" . zig-mode))
-
 ;;; packages.el ends here
