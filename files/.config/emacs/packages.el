@@ -120,6 +120,11 @@
   (add-to-list 'major-mode-remap-alist '(sh-mode . bash-ts-mode))
   :mode ("\\.sh\\'" . bash-ts-mode))
 
+(use-package c-ts-mode
+  :init
+  (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
+  :mode ("\\.c\\'" . c-ts-mode))
+
 (use-package cmake-ts-mode
   :mode ("\\.cmake\\'" . cmake-ts-mode))
 
