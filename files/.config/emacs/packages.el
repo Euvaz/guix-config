@@ -15,10 +15,8 @@
       use-package-always-ensure t)
 
 (use-package vertico
-  :init
-  (setq enable-recursive-minibuffers t)
-  :config
-  (vertico-mode t))
+  :init (setq enable-recursive-minibuffers t)
+  :config (vertico-mode t))
 
 (use-package orderless
   :config
@@ -115,14 +113,12 @@
 
 (use-package bash-ts-mode
   :ensure nil
-  :init
-  (add-to-list 'major-mode-remap-alist '(sh-mode . bash-ts-mode))
+  :init (add-to-list 'major-mode-remap-alist '(sh-mode . bash-ts-mode))
   :mode ("\\.sh\\'" . bash-ts-mode))
 
 (use-package c-ts-mode
   :ensure nil
-  :init
-  (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
+  :init (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
   :mode ("\\.c\\'" . c-ts-mode))
 
 (use-package cmake-ts-mode
@@ -131,8 +127,7 @@
 
 (use-package css-ts-mode
   :ensure nil
-  :init
-  (add-to-list 'major-mode-remap-alist '(css-mode . css-ts-mode))
+  :init (add-to-list 'major-mode-remap-alist '(css-mode . css-ts-mode))
   :mode ("\\.css\\'" . css-ts-mode))
 
 (use-package go-ts-mode
@@ -145,26 +140,22 @@
 
 (use-package html-ts-mode
   :ensure nil
-  :config
-  (add-to-list 'major-mode-remap-alist '(mhtml-mode . html-ts-mode))
+  :config (add-to-list 'major-mode-remap-alist '(mhtml-mode . html-ts-mode))
   :mode ("\\.html\\'" . html-ts-mode))
 
 (use-package json-ts-mode
   :ensure nil
-  :config
-  (add-to-list 'major-mode-remap-alist '(js-json-mode . json-ts-mode))
+  :config (add-to-list 'major-mode-remap-alist '(js-json-mode . json-ts-mode))
   :mode ("\\.json\\'" . json-ts-mode))
 
 (use-package python-ts-mode
   :ensure nil
-  :config
-  (add-to-list 'major-mode-remap-alist '(python-mode . python-ts-mode))
+  :config (add-to-list 'major-mode-remap-alist '(python-mode . python-ts-mode))
   :mode ("\\.py[iw]?\\'" . python-ts-mode))
 
 (use-package toml-ts-mode
   :ensure nil
-  :config
-  (add-to-list 'major-mode-remap-alist '(conf-toml-mode . toml-ts-mode))
+  :config (add-to-list 'major-mode-remap-alist '(conf-toml-mode . toml-ts-mode))
   :mode ("\\.toml\\'" . toml-ts-mode))
 
 (use-package yaml-ts-mode
