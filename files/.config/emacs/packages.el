@@ -109,6 +109,7 @@
           (python "https://github.com/tree-sitter/tree-sitter-python")
           (toml "https://github.com/tree-sitter/tree-sitter-toml")
           (yaml "https://github.com/ikatyang/tree-sitter-yaml")
+          (zig "https://github.com/tree-sitter-grammars/tree-sitter-zig")
           )))
 
 (use-package bash-ts-mode
@@ -161,5 +162,8 @@
 (use-package yaml-ts-mode
   :ensure nil
   :mode ("\\.ya?ml\\'" . yaml-ts-mode))
+
+(use-package zig-ts-mode
+  :mode ("\\.zig\\'" . zig-ts-mode))
 
 ;;; packages.el ends here
