@@ -118,55 +118,55 @@
 (use-package bash-ts-mode
   :ensure nil
   :init (add-to-list 'major-mode-remap-alist '(sh-mode . bash-ts-mode))
-  :mode ("\\.sh\\'" . bash-ts-mode))
+  :mode ("\\.sh\\'"))
 
 (use-package c-ts-mode
   :ensure nil
   :init (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
-  :mode ("\\.c\\'" . c-ts-mode))
+  :mode ("\\.c\\'"))
 
 (use-package cmake-ts-mode
   :ensure nil
-  :mode ("\\.cmake\\'" . cmake-ts-mode))
+  :mode ("\\.cmake\\'"))
 
 (use-package css-ts-mode
   :ensure nil
   :init (add-to-list 'major-mode-remap-alist '(css-mode . css-ts-mode))
-  :mode ("\\.css\\'" . css-ts-mode))
+  :mode ("\\.css\\'"))
 
 (use-package go-ts-mode
   :ensure nil
-  :mode ("\\.go\\'" . go-ts-mode))
+  :mode ("\\.go\\'"))
 
 (use-package go-mod-ts-mode
   :ensure nil
-  :mode ("go\\.mod\\'" . go-mod-ts-mode))
+  :mode ("go\\.mod\\'"))
 
 (use-package html-ts-mode
   :ensure nil
   :config (add-to-list 'major-mode-remap-alist '(mhtml-mode . html-ts-mode))
-  :mode ("\\.html\\'" . html-ts-mode))
+  :mode ("\\.html\\'"))
 
 (use-package json-ts-mode
   :ensure nil
   :config (add-to-list 'major-mode-remap-alist '(js-json-mode . json-ts-mode))
-  :mode ("\\.json\\'" . json-ts-mode))
+  :mode ("\\.json\\'"))
 
 (use-package python-ts-mode
   :ensure nil
   :config (add-to-list 'major-mode-remap-alist '(python-mode . python-ts-mode))
-  :mode ("\\.py[iw]?\\'" . python-ts-mode))
+  :mode ("\\.py[iw]?\\'"))
 
 (use-package toml-ts-mode
   :ensure nil
   :config (add-to-list 'major-mode-remap-alist '(conf-toml-mode . toml-ts-mode))
-  :mode ("\\.toml\\'" . toml-ts-mode))
+  :mode ("\\.toml\\'"))
 
 (use-package yaml-ts-mode
   :ensure nil
-  :mode ("\\.ya?ml\\'" . yaml-ts-mode))
+  :mode ("\\.ya?ml\\'"))
 
 (use-package zig-ts-mode
-  :mode ("\\.zig\\'" . zig-ts-mode))
+  :mode ("\\.zig\\'"))
 
 ;;; packages.el ends here
