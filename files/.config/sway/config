@@ -12,7 +12,7 @@ set $right ;
 set $term foot
 
 ## Set application launcher
-set $menu wmenu-run
+set $menu rofi -show drun
 
 ### Keybindings:
 ## Start a terminal
