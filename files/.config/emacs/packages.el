@@ -160,7 +160,7 @@
 (use-package json-ts-mode
   :ensure nil
   :config (add-to-list 'major-mode-remap-alist '(js-json-mode . json-ts-mode))
-  :mode ("\\.json\\'"))
+  :mode ("\\.jsonc?\\'"))
 
 (use-package python-ts-mode
   :ensure nil
