@@ -109,6 +109,7 @@
           (go "https://github.com/tree-sitter/tree-sitter-go")
           (gomod "https://github.com/camdencheek/tree-sitter-go-mod")
           (html "https://github.com/tree-sitter/tree-sitter-html")
+          (hyprlang "https://github.com/tree-sitter-grammars/tree-sitter-hyprlang")
           (json "https://github.com/tree-sitter/tree-sitter-json")
           (python "https://github.com/tree-sitter/tree-sitter-python")
           (toml "https://github.com/tree-sitter/tree-sitter-toml")
@@ -152,6 +153,9 @@
   :ensure nil
   :config (add-to-list 'major-mode-remap-alist '(mhtml-mode . html-ts-mode))
   :mode ("\\.html\\'"))
+
+(use-package hyprlang-ts-mode
+  :mode ("^.*/hypr/.*\\.conf\\'"))
 
 (use-package json-ts-mode
   :ensure nil
