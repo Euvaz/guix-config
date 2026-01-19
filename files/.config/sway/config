@@ -2,11 +2,11 @@
 ## Set Logo key as mod
 set $mod Mod4
 
-## Set directional keys (vim)
-set $left h
-set $down j
-set $up k
-set $right l
+## Set directional keys (improved vim)
+set $left j
+set $down k
+set $up l
+set $right ;
 
 ## Set terminal emulator
 set $term foot
