@@ -65,6 +65,9 @@
      (shell . t)
      )))
 
+(use-package htmlize
+  :after org)
+
 (use-package emms
   :config
   (setq emms-player-list '(emms-player-mpv))
