@@ -1,3 +1,11 @@
+### config
+### Commentary:
+## Main Sway configuration.
+### Configuration:
+
+## Include configs
+include ./config.d/*
+
 ### Definitions:
 ## Set Logo key as mod
 set $mod Mod4
@@ -32,5 +40,3 @@ bindsym $mod+Shift+c reload
 
 ## Exit sway (logs you out of your Wayland session)
 bindsym $mod+m exec swaymsg exit
-
-include ./config.d/*
