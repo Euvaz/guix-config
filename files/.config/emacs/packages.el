@@ -103,6 +103,7 @@
         '(
           (bash "https://github.com/tree-sitter/tree-sitter-bash")
           (c "https://github.com/tree-sitter/tree-sitter-c")
+          (cpp "https://github.com/tree-sitter/tree-sitter-cpp")
           (cmake "https://github.com/uyha/tree-sitter-cmake")
           (css "https://github.com/tree-sitter/tree-sitter-css")
           (go "https://github.com/tree-sitter/tree-sitter-go")
@@ -124,6 +125,11 @@
   :ensure nil
   :init (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
   :mode ("\\.c\\'"))
+
+(use-package c++-ts-mode
+  :ensure nil
+  :init (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
+  :mode ("\\.cpp\\'"))
 
 (use-package cmake-ts-mode
   :ensure nil
