@@ -1,7 +1,0 @@
-### Status Bar:
-## Configure Swaybar
-bar {
-    swaybar_command waybar
-
-    position top
-}
