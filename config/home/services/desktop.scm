@@ -17,7 +17,6 @@
   #:use-module (gnu packages pulseaudio) ; pamixer, pavucontrol
   #:use-module (gnu packages python) ; python
   #:use-module (gnu packages rust-apps) ; eza, ripgrep
-  #:use-module (gnu packages shells) ; zsh
   #:use-module (gnu packages shellutils) ; direnv
   #:use-module (gnu packages ssh) ; openssh
   #:use-module (gnu packages terminals) ; foot
@@ -68,8 +67,7 @@
         wl-clipboard
         zathura
         zathura-pdf-mupdf
-        zig
-        zsh))
+        zig))
 
 (define home-desktop-service-type
   (service-type (name 'home-desktop-config)

@@ -7,8 +7,7 @@
 (define (home-environment-variables-configuration-gexp config)
   '(("EDITOR" . "emacs -nw")
     ("PATH" . "${PATH}")
-    ("VISUAL" . "emacs -nw")
-    ("ZDOTDIR" . "${XDG_CONFIG_HOME}/zsh")))
+    ("VISUAL" . "emacs -nw")))
 
 (define home-environment-variables-configuration-service-type
   (service-type (name 'home-profile-environment-variables-service)
