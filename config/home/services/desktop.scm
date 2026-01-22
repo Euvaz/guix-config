@@ -23,6 +23,7 @@
   #:use-module (gnu packages tls) ; openssl
   #:use-module (gnu packages tor-browsers) ; mullvadbrowser
   #:use-module (gnu packages version-control) ; git
+  #:use-module (gnu packages vpn) ; wireguard-tools
   #:use-module (gnu packages wm) ; hyprland, waybar
   #:use-module (gnu packages xdisorg) ; fuzzel, wl-clipboaard
   #:use-module (gnu packages zig) ; zig
@@ -61,6 +62,7 @@
         ripgrep
         unzip
         waybar
+        wireguard-tools
         wl-clipboard
         zathura
         zathura-pdf-mupdf
