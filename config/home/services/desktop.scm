@@ -2,6 +2,7 @@
   #:use-module (gnu)
   #:use-module (gnu home services)
   #:use-module (gnu packages admin) ; btop
+  #:use-module (gnu packages commencement) ; gcc-toolchain
   #:use-module (gnu packages compression) ; unzip
   #:use-module (gnu packages curl) ; curl
   #:use-module (gnu packages emacs) ; emacs-next-pgtk
@@ -46,6 +47,7 @@
         font-victor-mono
         foot
         fuzzel
+        gcc-toolchain
         git
         gnupg
         hyprland
