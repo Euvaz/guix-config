@@ -26,6 +26,7 @@
   #:use-module (gnu packages vpn) ; wireguard-tools
   #:use-module (gnu packages wm) ; hyprland, waybar
   #:use-module (gnu packages xdisorg) ; fuzzel, wl-clipboaard
+  #:use-module (gnu packages xfce) ; thunar
   #:use-module (gnu packages zig) ; zig
 
   #:export (home-desktop-service-type))
@@ -61,6 +62,7 @@
         pinentry
         python
         ripgrep
+        thunar
         unzip
         waybar
         wireguard-tools
