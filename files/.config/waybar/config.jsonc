@@ -1,0 +1,73 @@
+{
+  // Bar position
+  "layer": "top",
+  "position": "top",
+
+  // Module layout
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock#1",
+    "clock#2",
+    "clock#3"
+  ],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "network",
+    "battery"
+  ],
+
+  // Left module configuration
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "format": "{name}"
+  },
+
+  // Center module configuration
+  "clock#1": {
+    "format": "{:%a}",
+    "tooltip": false
+  },
+  "clock#2": {
+    "tooltip": false
+  },
+  "clock#3": {
+    "format": "{:%m-%d}",
+    "tooltip": false
+  },
+
+  // Right module configuration
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["▂", "▄", "▆", "█"]
+  },
+
+  "network": {
+    "format-ethernet": "{ifname}",
+    "format-wifi": "{ifname}  {icon}  {essid}",
+    "format-disconnected": "OFLN",
+    "format-icons": ["▂", "▄", "▆", "█"]
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume:2}%",
+    "format-bluetooth": "{icon}  {volume}%B",
+    "format-muted": "MUTE",
+    "format-icons": {
+      "default": ["♪", "♫", "♫♪", "♫♫"]
+    },
+    "scroll-step": 5,
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol"
+  },
+
+  "tray": {
+    "icon-size": 20
+  }
+}

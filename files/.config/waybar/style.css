@@ -1,0 +1,57 @@
+* {
+    font-size: 20px;
+    font-family: monospace;
+}
+
+window#waybar {
+    background: #292b2e;
+    color: #fdf6e3;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+    color: #1a1a1a;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+    color: #292b2e;
+    background: #1a1a1a;
+}
+
+#workspaces,
+#clock.1,
+#clock.2,
+#clock.3,
+#battery,
+#network,
+#pulseaudio,
+#tray {
+    background: #1a1a1a;
+}
+
+#battery {
+    color: #859900;
+}
+
+#network {
+    color: #FFBF00;
+}
+
+#pulseaudio {
+    color: #268bd2;
+}
+
+#battery,
+#clock,
+#network,
+#pulseaudio {
+    padding: 0 10px;
+}
+
+#workspaces button {
+    padding: 0 2px;
+    color: #fdf6e3;
+}
+#workspaces button.active {
+    color: #268bd2;
+}
