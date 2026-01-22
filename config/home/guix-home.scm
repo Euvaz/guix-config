@@ -18,7 +18,15 @@
                     (directories '("../../files/"))))
           (service home-desktop-service-type)
           (service home-environment-variables-configuration-service-type)
-          (service home-bash-service-type)
+          (service home-bash-service-type
+                   (home-bash-configuration
+                    (guix-defaults? #f)
+                    (aliases
+                     '(("ls" . "eza")))
+                    (bash-profile
+                     (list (local-file "../../files/.config/bash/bash_profile.sh")))
+                    (bashrc
+                     (list (local-file "../../files/.config/bash/bashrc.sh")))))
           (service home-pipewire-service-type)
           (service home-dbus-service-type)))))
 
