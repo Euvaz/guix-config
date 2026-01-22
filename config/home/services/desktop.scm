@@ -13,7 +13,7 @@
   #:use-module (gnu packages node) ; node
   #:use-module (gnu packages package-management) ; flatpak
   #:use-module (gnu packages pdf) ; zathura, zathura-pdf-mupdf
-  #:use-module (gnu packages pulseaudio) ; pavucontrol
+  #:use-module (gnu packages pulseaudio) ; pamixer, pavucontrol
   #:use-module (gnu packages python) ; python
   #:use-module (gnu packages rust-apps) ; eza, ripgrep
   #:use-module (gnu packages shells) ; zsh
@@ -23,8 +23,8 @@
   #:use-module (gnu packages tls) ; openssl
   #:use-module (gnu packages tor-browsers) ; mullvadbrowser
   #:use-module (gnu packages version-control) ; git
-  #:use-module (gnu packages wm) ; sway, swaybg, swayidle, swaylock, wmenu
-  #:use-module (gnu packages xdisorg) ; wl-clipboaard
+  #:use-module (gnu packages wm) ; hyprland, waybar
+  #:use-module (gnu packages xdisorg) ; fuzzel, wl-clipboaard
   #:use-module (gnu packages zig) ; zig
 
   #:export (home-desktop-service-type))
@@ -44,25 +44,24 @@
         font-google-noto-emoji
         font-victor-mono
         foot
+        fuzzel
         git
         gnupg
+        hyprland
         icecat
         mullvadbrowser
         node
         numactl
         openssh
         openssl
+        pamixer
         pavucontrol
         pinentry
         python
         ripgrep
-        sway
-        swaybg
-        swayidle
-        swaylock
         unzip
+        waybar
         wl-clipboard
-        wmenu
         zathura
         zathura-pdf-mupdf
         zig
