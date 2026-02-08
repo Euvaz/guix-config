@@ -16,7 +16,6 @@
   #:use-module (gnu packages pdf) ; zathura, zathura-pdf-mupdf
   #:use-module (gnu packages pulseaudio) ; pamixer, pavucontrol
   #:use-module (gnu packages python) ; python
-  #:use-module (gnu packages rust-apps) ; eza, ripgrep
   #:use-module (gnu packages shellutils) ; direnv
   #:use-module (gnu packages ssh) ; openssh
   #:use-module (gnu packages terminals) ; foot
@@ -39,7 +38,6 @@
         ebtables
         emacs-next-pgtk
         emacs-org-texlive-collection
-        eza
         flatpak
         font-awesome
         font-fira-code
@@ -61,7 +59,6 @@
         pavucontrol
         pinentry
         python
-        ripgrep
         thunar
         thunar-volman
         unzip

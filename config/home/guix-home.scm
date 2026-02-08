@@ -22,7 +22,8 @@
                    (home-bash-configuration
                     (guix-defaults? #f)
                     (aliases
-                     '(("ls" . "eza")))
+                     '(("ls" . "ls --color=auto")
+                       ("grep" . "grep --color=auto")))
                     (bash-profile
                      (list (local-file "../../files/.config/bash/bash_profile.sh")))
                     (bashrc
